@@ -11,7 +11,7 @@ int main(){
         }else if(c == '\b'){
             putchar('\\');
             putchar('b');
-        }else
+        }else{
             putchar(c);
         }
     }
