@@ -1,0 +1,9 @@
+//
+// Created by cuixin on 2019-12-21.
+//
+
+#ifndef C_PROGRAMMING_LANGUAGE_EXERCISES_CHARUTIL_H
+#define C_PROGRAMMING_LANGUAGE_EXERCISES_CHARUTIL_H
+int getch(void);
+void ungetch(int c);
+#endif //C_PROGRAMMING_LANGUAGE_EXERCISES_CHARUTIL_H
