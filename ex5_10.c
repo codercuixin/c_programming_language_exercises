@@ -37,8 +37,6 @@ double pop(void) {
     }
 }
 
-
-
 int getop(char *s) {
     if(isdigit(s[0])){
         return NUMBER;
