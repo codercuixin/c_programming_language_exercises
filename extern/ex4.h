@@ -1,0 +1,8 @@
+//
+// Created by cuixin on 2019/12/24.
+//
+
+#ifndef C_PROGRAMMING_LANGUAGE_EXERCISES_EX4_H
+#define C_PROGRAMMING_LANGUAGE_EXERCISES_EX4_H
+extern int var = 100;
+#endif //C_PROGRAMMING_LANGUAGE_EXERCISES_EX4_H
