@@ -18,7 +18,6 @@ void minsscanf(char *format, ...) {
                 ival = va_arg(ap, int*);
                 scanf("%d", ival);
                 break;
-                //scanf cannot handle %f
 //            case 'f':
 //                dval = va_arg(ap, double *);
 //                scanf("%f", dval);
@@ -36,7 +35,7 @@ void minsscanf(char *format, ...) {
 
 int main(){
     int i;
-//    float f;
+//    float f;  //scanf cannot handle %f
     char c;
     minsscanf("%d  %c", &i, &c);
     printf("%d\n", i);
