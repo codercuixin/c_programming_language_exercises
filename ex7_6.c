@@ -32,31 +32,33 @@ int main(int argc, char *argv[]) {
     char line2[MAXLINE];
     char *p1;
     char *p2;
+    int lineNo = 1;
     while(1) {
         p1 = fgets(line1, MAXLINE, f1);
         p2 = fgets(line2, MAXLINE, f2);
         if (p1 != NULL && p2 != NULL) {
            int cmp = strcmp(p1, p2);
             if (cmp != 0) {
-                printf("the two file isn't same\n");
-                printf("%s line: %s\n", file1Name, p1);
-                printf("%s line: %s\n", file2Name, p2);
+                printf("%s and %s are not same\n", file1Name, file2Name);
+                printf("%s line(%d): %s\n", file1Name, lineNo, p1);
+                printf("%s line(%d): %s\n", file2Name, lineNo, p2);
                 break;
             }
         } else if (p1 != NULL && p2 == NULL) {
-            printf("the two file isn't same\n");
-            printf("%s line: %s\n", file1Name, p1);
-            printf("%s line has reach end\n", file2Name);
+            printf("%s and %s are not same\n", file1Name, file2Name);
+            printf("%s line(%d): %s\n", file1Name, lineNo, p1);
+            printf("%s line(%d) is emtpy\n", file2Name, lineNo);
             break;
         } else if (p1 == NULL && p2 != NULL) {
-            printf("the two file isn't same\n");
-            printf("%s line has reach end\n", file1Name);
-            printf("%s line: %s\n", file2Name, p2);
+            printf("%s and %s are not same\n", file1Name, file2Name);
+            printf("%s line(%d) is emtpy\n", file1Name, lineNo);
+            printf("%s line(%d): %s\n", file2Name, lineNo, p2);
             break;
         } else {
-            printf("the two file is same\n");
+            printf("%s and %s are same\n", file1Name, file2Name);
             break;
         }
+        lineNo++;
     }
     //exit will close all files
     exit(0);
